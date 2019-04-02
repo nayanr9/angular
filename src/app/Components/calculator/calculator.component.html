@@ -1,0 +1,22 @@
+<h1> Math Calculator </h1>
+<div>
+  <p>
+    <input name="firstValue" placeholder="Enter First Value" [(ngModel)]="firstValue" type="number" />
+  </p>
+  <p>
+    <input name="secondValue" placeholder="Enter Sencond Value" [(ngModel)]="secondValue" type="number" />
+  </p>
+  <p>
+    <select name="operand" [(ngModel)]="operand" >
+      <option selected disabled>Select</option>
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
+  </p>
+  <p>
+    <button (click)="process()">Calculate</button>
+  </p>
+  <p id="result">{{ resultValue }}</p>
+</div>
