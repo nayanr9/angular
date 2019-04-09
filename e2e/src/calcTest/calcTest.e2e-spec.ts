@@ -9,6 +9,6 @@ describe('test the calculator.', () => {
         calcPage.fillValues(2, 3);
         calcPage.clickButton();
         browser.sleep(3000);
-        expect(calcPage.getResult()).toBe('5');
+        expect(calcPage.getResult()).toBe('50');
     });
 });
