@@ -5,13 +5,18 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
   allScriptsTimeout: 11000,
+  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'internet explorer',
+    'ignoreProtectedModeSettings': true,
+    'ignoreZoomSetting': true,
+    'platform': 'ANY',
+    'version': '11'
   },
-  directConnect: true,
+  directConnect: false,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
@@ -24,5 +29,6 @@ exports.config = {
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    browser.manage().timeouts().implicitlyWait(5000);
   }
 };

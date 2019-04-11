@@ -2,7 +2,8 @@ import { browser, element, by } from 'protractor';
 
 export class CalcPage{
     navigateTo() {
-        return browser.get('/');
+        return browser.get('/')
+        .then(() => this.clickCalLink());
     }
 
     fillValues(first: number, second: number) {
@@ -12,6 +13,10 @@ export class CalcPage{
 
     clickButton() {
         element(by.tagName('button')).click();
+    }
+
+    clickCalLink() {
+        element(by.id('calLink')).click();
     }
 
     getResult() {
