@@ -1,0 +1,36 @@
+:host {
+  display: grid;
+  //padding: 0px 50px 0px 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px minmax(auto, max-content);
+
+    a {
+      margin: 0px;
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 15px;
+      background: hsla(196, 100%, 55%, 0.3);
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 100px;
+      vertical-align: middle;
+      padding: 20px;
+      text-align: center;
+
+      &:hover {
+        background: hsla(1, 100%, 55%, 0.3);
+        cursor: pointer;
+      }
+      &:visited {
+        color: black;
+        text-decoration: none;
+      }
+    }
+    .router-link-active {
+      background: hsla(1, 100%, 55%, 0.4);
+    }
+  .sports-container {
+    background: hsla(1, 100%, 55%, 0.4);
+  }
+}

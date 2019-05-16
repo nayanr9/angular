@@ -132,5 +132,10 @@
       }
     }
   },
-  "defaultProject": "Testing"
+  "defaultProject": "Testing",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
